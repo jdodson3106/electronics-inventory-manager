@@ -9,6 +9,15 @@ public class Passive extends Component {
     private double tolerance;
     private double impedance;
     private double power;
+    private double resistance;
+
+    public double getResistance() {
+        return resistance;
+    }
+
+    public void setResistance(double resistance) {
+        this.resistance = resistance;
+    }
 
     public double getPower() {
         return power;
