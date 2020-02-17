@@ -14,7 +14,7 @@ public class InventoryTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private Set<Component> componentSet;
+//    private Set<Component> componentSet;
 
     // == Accessors and Mutators ==
     public String getName() {
@@ -33,11 +33,11 @@ public class InventoryTable {
         this.id = id;
     }
 
-    public Set<Component> getComponentSet() {
-        return componentSet;
-    }
-
-    public void setComponentSet(Set<Component> componentSet) {
-        this.componentSet = componentSet;
-    }
+//    public Set<Component> getComponentSet() {
+//        return componentSet;
+//    }
+//
+//    public void setComponentSet(Set<Component> componentSet) {
+//        this.componentSet = componentSet;
+//    }
 }
