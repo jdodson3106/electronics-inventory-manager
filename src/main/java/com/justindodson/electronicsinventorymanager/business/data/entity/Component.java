@@ -13,10 +13,26 @@ public class Component {
     private long id;
     @OneToOne
     private Manufacturer manufacturer;
-    private String manufacturerPartNumber;
     private double price;
     private String purchaseURL;
-    private String mountType;
+    private int stockQty;
+    private int reorderQty;
+
+    public int getStockQty() {
+        return stockQty;
+    }
+
+    public void setStockQty(int stockQty) {
+        this.stockQty = stockQty;
+    }
+
+    public int getReorderQty() {
+        return reorderQty;
+    }
+
+    public void setReorderQty(int reorderQty) {
+        this.reorderQty = reorderQty;
+    }
 
     public long getId() {
         return id;
@@ -32,14 +48,6 @@ public class Component {
 
     public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
-    }
-
-    public String getManufacturerPartNumber() {
-        return manufacturerPartNumber;
-    }
-
-    public void setManufacturerPartNumber(String manufacturerPartNumber) {
-        this.manufacturerPartNumber = manufacturerPartNumber;
     }
 
     public double getPrice() {
@@ -58,11 +66,4 @@ public class Component {
         this.purchaseURL = purchaseURL;
     }
 
-    public String getMountType() {
-        return mountType;
-    }
-
-    public void setMountType(String mountType) {
-        this.mountType = mountType;
-    }
 }
