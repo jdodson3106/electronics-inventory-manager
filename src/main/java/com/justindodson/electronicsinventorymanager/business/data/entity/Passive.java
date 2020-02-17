@@ -8,6 +8,15 @@ public class Passive extends Component {
     private String type;
     private double tolerance;
     private double impedance;
+    private double power;
+
+    public double getPower() {
+        return power;
+    }
+
+    public void setPower(double power) {
+        this.power = power;
+    }
 
     public String getCategory() {
         return category;
