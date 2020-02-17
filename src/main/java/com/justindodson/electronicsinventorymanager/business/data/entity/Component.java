@@ -15,10 +15,10 @@ public class Component {
     private Manufacturer manufacturer;
     private double price;
     private String purchaseURL;
+    private String description;
     private String binLocation;
     private int stockQty;
     private int reorderQty;
-    private String description;
     private String mountType;
     private double voltageRating;
     private double currentRating;
