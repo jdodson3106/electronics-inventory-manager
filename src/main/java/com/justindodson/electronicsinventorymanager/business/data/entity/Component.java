@@ -15,8 +15,71 @@ public class Component {
     private Manufacturer manufacturer;
     private double price;
     private String purchaseURL;
+    private String binLocation;
     private int stockQty;
     private int reorderQty;
+    private String description;
+    private String mountType;
+    private double voltageRating;
+    private double currentRating;
+    private double capacitance;
+    private String packageType;
+
+    public double getCapacitance() {
+        return capacitance;
+    }
+
+    public void setCapacitance(double capacitance) {
+        this.capacitance = capacitance;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getMountType() {
+        return mountType;
+    }
+
+    public void setMountType(String mountType) {
+        this.mountType = mountType;
+    }
+
+    public double getVoltageRating() {
+        return voltageRating;
+    }
+
+    public void setVoltageRating(double voltageRating) {
+        this.voltageRating = voltageRating;
+    }
+
+    public double getCurrentRating() {
+        return currentRating;
+    }
+
+    public void setCurrentRating(double currentRating) {
+        this.currentRating = currentRating;
+    }
+
+    public String getPackageType() {
+        return packageType;
+    }
+
+    public void setPackageType(String packageType) {
+        this.packageType = packageType;
+    }
+
+    public String getBinLocation() {
+        return binLocation;
+    }
+
+    public void setBinLocation(String binLocation) {
+        this.binLocation = binLocation;
+    }
 
     public int getStockQty() {
         return stockQty;

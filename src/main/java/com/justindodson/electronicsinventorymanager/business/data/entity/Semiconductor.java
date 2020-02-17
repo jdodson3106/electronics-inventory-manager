@@ -8,12 +8,33 @@ import javax.persistence.Entity;
 public class Semiconductor extends Component{
 
     private String category;
-    private String description;
-    private String mountType;
-    private double voltageRating;
-    private double currentRating;
-    private double capacitance;
-    private String packageType;
+    private String type;
+    private double power;
+    private double frequency;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public double getPower() {
+        return power;
+    }
+
+    public void setPower(double power) {
+        this.power = power;
+    }
+
+    public double getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(double frequency) {
+        this.frequency = frequency;
+    }
 
     public String getCategory() {
         return category;
@@ -23,51 +44,4 @@ public class Semiconductor extends Component{
         this.category = category;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getMountType() {
-        return mountType;
-    }
-
-    public void setMountType(String mountType) {
-        this.mountType = mountType;
-    }
-
-    public double getVoltageRating() {
-        return voltageRating;
-    }
-
-    public void setVoltageRating(double voltageRating) {
-        this.voltageRating = voltageRating;
-    }
-
-    public double getCurrentRating() {
-        return currentRating;
-    }
-
-    public void setCurrentRating(double currentRating) {
-        this.currentRating = currentRating;
-    }
-
-    public double getCapacitance() {
-        return capacitance;
-    }
-
-    public void setCapacitance(double capacitance) {
-        this.capacitance = capacitance;
-    }
-
-    public String getPackageType() {
-        return packageType;
-    }
-
-    public void setPackageType(String packageType) {
-        this.packageType = packageType;
-    }
 }
