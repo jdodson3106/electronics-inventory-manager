@@ -1,5 +1,8 @@
 package com.justindodson.electronicsinventorymanager.business.data.entity;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +14,12 @@ public class Component {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="table_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private InventoryTable inventoryTable;
+
     @OneToOne
     private Manufacturer manufacturer;
     private double price;

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>All Tables</title>
+    <title>New Table</title>
 </head>
 <body style="background-color: #f2f2f2;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -49,13 +49,19 @@
 
 <div class="container"><br>
     <div class="row">
-        <div class="col-md-4" th:each="table : ${tables}">
-            <div class="card">
-                <div class="card-header" th:text="${table.name}">
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card " style="margin-top: 100px;">
+                <div class="card-header text-white bg-primary">New Inventory Table</div>
+                <div class="card-body">
+                    <form th:action="@{/inventory-table/new}" method="post" th:object="${table}">
+                        <input class="form-control" type="text" placeholder="Table Name" th:field="*{name}"><br>
+                        <input type="submit" class="btn btn-xl btn-primary" value="Create Table">
+                    </form>
                 </div>
             </div>
         </div>
+        <div class="col-md-3"></div>
     </div>
 </div>
 

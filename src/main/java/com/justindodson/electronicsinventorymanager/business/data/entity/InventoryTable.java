@@ -1,9 +1,7 @@
 package com.justindodson.electronicsinventorymanager.business.data.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -14,7 +12,8 @@ public class InventoryTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-//    private Set<Component> componentSet;
+    @OneToMany(mappedBy = "inventoryTable")
+    private Set<Component> componentSet = new HashSet<>();
 
     // == Accessors and Mutators ==
     public String getName() {
@@ -33,11 +32,11 @@ public class InventoryTable {
         this.id = id;
     }
 
-//    public Set<Component> getComponentSet() {
-//        return componentSet;
-//    }
-//
-//    public void setComponentSet(Set<Component> componentSet) {
-//        this.componentSet = componentSet;
-//    }
+    public Set<Component> getComponentSet() {
+        return componentSet;
+    }
+
+    public void setComponentSet(Set<Component> componentSet) {
+        this.componentSet = componentSet;
+    }
 }

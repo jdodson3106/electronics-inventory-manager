@@ -20,7 +20,7 @@ public class InventoryTableServiceImpl implements InventoryTableService {
         if(table.isPresent()) {
             InventoryTable newTable = table.get();
             newTable.setName(tableEntity.getName());
-//            newTable.setComponentSet(tableEntity.getComponentSet());
+            newTable.setComponentSet(tableEntity.getComponentSet());
 
             newTable = inventoryTableRepository.save(newTable);
             return newTable;
